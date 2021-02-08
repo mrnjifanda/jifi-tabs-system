@@ -37,6 +37,21 @@ Simple utilisation
 </div>
 ```
 
+Ajouter une animation de transition
+Actuelement uniquement l'animation fade est disponible.
+
+```html
+<div class="jifi-tabs-systems" data-transition="fade"></div>
+```
+
+Charger un contenu externe
+
+```html
+<li class="jifi-tabs-li">
+    <a class="jifi-js-tabs" href="#ajaxtab" data-page="ajax-content.html" data-load="">Ajax Tab 1</a>
+</li>
+```
+
 ## Note
 
 Le système utilise l'API fetch javascript pour charger les contenus externe, donc vous devez utiliser un server local (Live servr de Vs Code, Server interne de PHP, Ruby ou Node Js par exemple) pour le faire fonctionner le hors ligne.
