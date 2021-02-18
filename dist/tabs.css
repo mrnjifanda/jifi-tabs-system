@@ -1,6 +1,14 @@
+/* Base code Mr NJIFANDA (https://www.njifanda.com/open-source/jifi-tabs-system)
+ * Code soumis à notre License pour toutes utilisations ou modifications
+ * Author : Mr NJIFANDA
+ * Author URL: http://njifanda.com
+ * Date create: 12-01-2017
+ * Date Update: 18-02-2021 09:45AM
+ */
+
 .jifi-tabs-systems {
-    margin-top: 5px;
-    padding-right: 10px;
+    padding: 10px;
+    --color: #254f9c;
 }
 
 .jifi-tabs {
@@ -34,7 +42,7 @@
 
 .jifi-tabs .active a {
     color: #fff;
-    background-color: #254f9c;
+    background-color: var(--color);
     background-image: linear-gradient(45deg, rgba(255, 255, 255, .15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .15) 50%, rgba(255, 255, 255, .15) 75%, transparent 75%, transparent);
 }
 
@@ -47,7 +55,6 @@
     display: none;
     width: 100%;
     padding: 10px;
-    overflow-y: scroll;
 }
 
 .jifi-tab-content.active {
@@ -63,8 +70,49 @@
     opacity: 1;
 }
 
-/* Loader */
+/** New Style System Tabs (12/02/2021 01h18) **/
+.jifi-tabs-systems.jifi-tabs-systems[jifi-tabs-style="2"] {
+    margin-top: 10px;
+    padding: 0;
+}
 
+.jifi-tabs-systems[jifi-tabs-style="2"] .jifi-tabs {
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    width: 100%;
+    border-bottom: 1px solid #f3f3f3;
+}
+
+.jifi-tabs-systems[jifi-tabs-style="2"] .jifi-tabs li {
+    float: none;
+    width: inherit;
+}
+
+.jifi-tabs-systems[jifi-tabs-style="2"] .jifi-tabs a {
+    box-shadow: none;
+    background: transparent;
+    border-bottom: 2px solid transparent;
+    text-align: center;
+    width: inherit;
+    padding: 10px 10px!important;
+}
+
+.jifi-tabs-systems[jifi-tabs-style="2"] .jifi-tabs .active a {
+    border-bottom-color: var(--color);
+    color: var(--color);
+}
+
+.jifi-tabs-systems[jifi-tabs-style="2"] .jifi-tabs-content {
+    background: transparent;
+    box-shadow: none;
+}
+
+.jifi-tabs-systems[jifi-tabs-style="2"] .jifi-tabs-content .jifi-tab-content {
+    padding: 10px 0;
+}
+
+/** Loader **/
 .jifi-tabs-loader {
     position: absolute;
     background: rgb(37 79 157 / 70%);
@@ -100,6 +148,12 @@
     -webkit-animation: jifi-tabs-loader .5s linear infinite;
     -moz-animation: jifi-tabs-loader .5s linear infinite;
     animation: jifi-tabs-loader .5s linear infinite;
+}
+
+/** Style 2 **/
+.jifi-tabs-systems[jifi-tabs-style="2"] .jifi-tabs-loader span {
+    left: 0;
+    transform: translate(0, -50%);
 }
 
 @keyframes jifi-tabs-loader {

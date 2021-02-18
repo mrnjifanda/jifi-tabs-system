@@ -1,0 +1,73 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: 0;
+}
+
+body {
+    overflow-x: hidden!important;
+    font: 500 .9rem/1 sans-serif;
+    color: #797979;
+    margin: 30px;
+}
+
+body>h1 {
+    text-align: center;
+    margin: 50px 0;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+h2 code {
+    color: brown;
+}
+
+.flex {
+    display: flex;
+    justify-content: space-between;
+}
+
+.flex>div {
+    width: 50%;
+}
+
+.style-2 {
+    margin-left: 30px;
+}
+
+.jifi-tab-content h1 {
+    margin: 20px 0;
+}
+
+.jifi-tab-content p {
+    font-size: 15px;
+    line-height: 20px;
+}
+
+.jifi-tab-content p::first-letter {
+    margin-left: 30px;
+}
+
+
+@media only screen and (max-width: 600px) {
+    body {
+        margin: 10px;
+    }
+
+    .flex {
+      flex-direction: column;
+    }
+    .flex>div {
+        width: 100%;
+    }
+
+    .style-2 {
+        margin-left: 0;
+    }
+}

@@ -1,9 +1,18 @@
+/* Base code Mr NJIFANDA (https://www.njifanda.com/open-source/jifi-tabs-system)
+ * Code soumis à notre License pour toutes utilisations ou modifications
+ * Author : Mr NJIFANDA
+ * Author URL: http://njifanda.com
+ * Date create: 12-01-2017
+ * Date Update: 18-02-2021 09:45AM
+ */
+
 const afficherOnglet = function(a) {
     const validTransition = new Array(['fade']),
           li = a.parentNode,
           div = a.parentNode.parentNode.parentNode,
           activeTab = div.querySelector('.jifi-tab-content.active'),
-          aAfficher = div.querySelector(a.getAttribute('href'))
+          aAfficher = div.querySelector(a.getAttribute('href')),
+          transition = div.getAttribute("jifi-tabs-transition");
 
     if (li.classList.contains('active')) {
         return false;
@@ -15,9 +24,7 @@ const afficherOnglet = function(a) {
     // On ajoute la class active à l'onglet actuel
     li.classList.add('active');
 
-    transition = div.dataset.transition
-
-    if (transition === undefined || !validTransition.indexOf(transition)) {
+    if (transition === null || !validTransition.indexOf(transition)) {
         activeTab.classList.remove('active');
         aAfficher.classList.add('active');
     } else {
@@ -59,8 +66,7 @@ const getTabContent = async function (elem, url) {
 
             div.innerHTML = data;
             afficherOnglet(elem);
-            elem.dataset.load = "load";
-
+            elem.setAttribute("jifi-tabs-load", "load");
         } else {
             alert(response.status)
         }
@@ -75,9 +81,9 @@ const getTabContent = async function (elem, url) {
 
 const loadeContent = function (item) {
     if(item.classList.contains('jifi-js-tabs')){
-        const url = item.dataset.page;
+        const url = item.getAttribute("jifi-tabs-url");
 
-        if (url && url !== "" && item.dataset.load !== 'load') {
+        if (url && url !== "" && item.getAttribute("jifi-tabs-load") !== 'load') {
             getTabContent(item, url);
         } else {
             afficherOnglet(item);
