@@ -1,6 +1,20 @@
 # jifi-tabs-system
 Crée simplement et facilement un systeme de tabs (HTML, CSS et Js) dans vos sites ou applications web
 
+## Images
+<p align="center">
+  <a href="https://github.com/mrnjifanda/easytalk-plateform">
+    <img width="500" src="https://github.com/mrnjifanda/jifi-tabs-system/blob/main/default-style.png">
+  </a>
+</p>
+
+
+<p align="center">
+  <a href="https://github.com/mrnjifanda/easytalk-plateform">
+    <img width="500" src="https://github.com/mrnjifanda/jifi-tabs-system/blob/main/second-style.png">
+  </a>
+</p>
+
 ## Utilisation
 
 Ajouter le fichier css et javascript dans votre page
