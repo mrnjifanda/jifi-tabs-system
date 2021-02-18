@@ -37,18 +37,25 @@ Simple utilisation
 </div>
 ```
 
+Changer de style
+Actuelement uniquement 2 styles sont disponibles.
+
+```html
+<div class="jifi-tabs-systems" jifi-tabs-style="2"></div>
+```
+
 Ajouter une animation de transition
 Actuelement uniquement l'animation fade est disponible.
 
 ```html
-<div class="jifi-tabs-systems" data-transition="fade"></div>
+<div class="jifi-tabs-systems" jifi-tabs-transition="fade"></div>
 ```
 
 Charger un contenu externe
 
 ```html
 <li class="jifi-tabs-li">
-    <a class="jifi-js-tabs" href="#ajaxtab" data-page="ajax-content.html" data-load="">Ajax Tab 1</a>
+    <a class="jifi-js-tabs" href="#ajaxtab" jifi-tabs-url="ajax-content.html" jifi-tabs-load="">Ajax Tab 1</a>
 </li>
 ```
 
