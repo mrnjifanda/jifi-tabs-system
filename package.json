@@ -1,0 +1,19 @@
+{
+  "name": "jifi-tabs-system",
+  "version": "1.0.0",
+  "description": "Simply and easily create a system of tabs (HTML, CSS and Js) in your sites or web applications",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mrnjifanda/jifi-tabs-system.git"
+  },
+  "author": "Mr NJIFANDA",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mrnjifanda/jifi-tabs-system/issues"
+  },
+  "homepage": "https://github.com/mrnjifanda/jifi-tabs-system#readme"
+}
